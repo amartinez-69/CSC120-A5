@@ -1,11 +1,11 @@
 public class Engine {
     
-    private FuelType typeFuel; //type of fuel used
+    private FuelType fuelType; //type of fuel used
     double maxFuel; //maxium fuel (100.0)
     double currentFuel; //engine's current fuel level
 
-    public Engine(FuelType typeFuel, double currentFuel){ //sets engine mechanics 
-        this.typeFuel = typeFuel; 
+    public Engine(FuelType fuelType, double currentFuel){ //sets engine mechanics 
+        this.fuelType = fuelType; 
         this.currentFuel = currentFuel;
 
     }
@@ -24,6 +24,10 @@ public class Engine {
         else{
             throw new RuntimeException("The train engine is out of fuel. Please refuel."); //When fuel is 0.0, throws exception
         }
+    }
+
+    public FuelType getFuelType() {
+        return fuelType;
     }
 
     public static void main(String[] args) {
